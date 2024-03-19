@@ -1,0 +1,7 @@
+FROM python:3.8
+LABEL Folder="Flaskapp"
+LABEL Developer="Nirmal Omkar"
+COPY . .
+RUN pip install -r requirements.txt
+EXPOSE 5000
+CMD [ "flask","run","--host","0.0.0.0"]
